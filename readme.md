@@ -8,24 +8,24 @@
 - Stress testing and see how far I could go with it
 
 
-### <u>Features (TODO)</u>
-- Inventory control and management
-- Analytics
-- Orders overview 
-- Customers overview
-- API webhooks to multiple payment gateways
-- Instant push notifications (IPN)
-- Wallet support (eWallet)
-- Actions audit
-- Fraud system
+### Features
+- [ ] Inventory control and management
+- [ ] Analytics
+- [ ] Orders overview 
+- [ ] Customers overview
+- [ ] API webhooks to multiple payment gateways
+- [ ] Instant push notifications (IPN)
+- [ ] Wallet support (eWallet)
+- [ ] Actions audit
+- [ ] Fraud system
 
 
-### <u>API Gateways</u>
-- Coinbase
-- Stripe
-- Paypal
-- PayOp
-- Klarna/SoFort
-- G2A
-- Blockchain
-- Bitpay
+### API Gateways
+- [ ] Coinbase
+- [ ] Stripe
+- [ ] Paypal
+- [ ] PayOp
+- [ ] Klarna/SoFort
+- [ ] G2A
+- [ ] Blockchain
+- [ ] Bitpay
