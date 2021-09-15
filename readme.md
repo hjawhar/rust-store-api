@@ -18,7 +18,7 @@
 - [ ] Wallet support (eWallet)
 - [ ] Actions audit
 - [ ] Fraud system
-
+- [ ] Swagger documentation
 
 ### API Gateways
 - [ ] Coinbase
