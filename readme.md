@@ -18,6 +18,8 @@
 - [ ] Wallet support (eWallet)
 - [ ] Actions audit
 - [ ] Fraud system
+- [ ] 2FA authentication
+- [ ] Email & invoicing system
 
 
 ### API Gateways
