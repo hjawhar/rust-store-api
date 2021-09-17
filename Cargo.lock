@@ -541,6 +541,24 @@ dependencies = [
 
 [[package]]
 name = "bson"
+version = "0.14.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3c177ed0122f24ce5e0f05bf9b29e79f3ac1a359bc504e0e14c3b34896c71c00"
+dependencies = [
+ "byteorder",
+ "chrono",
+ "hex 0.3.2",
+ "libc",
+ "linked-hash-map",
+ "md5",
+ "rand 0.7.3",
+ "serde 1.0.130",
+ "serde_json",
+ "time 0.1.43",
+]
+
+[[package]]
+name = "bson"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1dcc15cd0b9aff8e8326561dcf0bb6e56d0e559f3a4897f615b4a5075ab54c46"
@@ -548,7 +566,7 @@ dependencies = [
  "ahash",
  "base64",
  "chrono",
- "hex",
+ "hex 0.4.3",
  "indexmap",
  "lazy_static",
  "rand 0.8.4",
@@ -1110,6 +1128,12 @@ dependencies = [
 
 [[package]]
 name = "hex"
+version = "0.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "805026a5d0141ffc30abb3be3173848ad46a1b1664fe632428479619a3644d77"
+
+[[package]]
+name = "hex"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
@@ -1338,6 +1362,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "md5"
+version = "0.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7e6bcd6433cff03a4bfc3d9834d504467db1f1cf6d0ea765d37d330249ed629d"
+
+[[package]]
 name = "memchr"
 version = "2.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1434,14 +1464,14 @@ dependencies = [
  "async-trait",
  "base64",
  "bitflags",
- "bson",
+ "bson 2.0.0",
  "chrono",
  "derivative",
  "futures-core",
  "futures-executor",
  "futures-io",
  "futures-util",
- "hex",
+ "hex 0.4.3",
  "hmac",
  "lazy_static",
  "md-5",
@@ -1873,6 +1903,7 @@ name = "rust-store-api"
 version = "0.1.0"
 dependencies = [
  "actix-web",
+ "bson 0.14.1",
  "config",
  "dotenv",
  "mongodb",

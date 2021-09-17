@@ -2,16 +2,28 @@ mod config;
 mod db;
 mod models;
 mod routes;
+mod services;
 
 use crate::db::connect_to_mongodb;
 use crate::routes::{hello, status};
+use services::UserService;
 
 use actix_web::{App, HttpServer};
 
 use dotenv::dotenv;
 
-pub fn printabc() {
-    println!("{}", "abc")
+pub struct ServiceContainer {
+    user: UserService,
+}
+
+impl ServiceContainer {
+    pub fn new(user: UserService) -> Self {
+        ServiceContainer { user }
+    }
+}
+
+pub struct AppState {
+    service_container: ServiceContainer,
 }
 
 #[actix_web::main]
