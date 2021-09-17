@@ -20,7 +20,7 @@
 - [ ] Fraud system
 - [ ] 2FA authentication
 - [ ] Email & invoicing system
-
+- [ ] Swagger documentation
 
 ### API Gateways
 - [ ] Coinbase
