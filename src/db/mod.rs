@@ -1,15 +1,11 @@
+use crate::models::Err;
 use crate::models::User;
-use mongodb::{bson::doc, options::FindOptions};
+use mongodb::error::Error;
+use mongodb::results::InsertOneResult;
 use mongodb::{options::ClientOptions, Client, Cursor};
+// use mongodb::error::Error;
 
-struct Err {}
-impl From<mongodb::error::Error> for Err {
-    fn from(_error: mongodb::error::Error) -> Self {
-        Err {}
-    }
-}
-
-pub async fn connect_to_mongodb() -> mongodb::error::Result<()> {
+pub async fn connect_to_mongodb(name: &str) -> mongodb::error::Result<mongodb::Database> {
     // Parse a connection string into an options struct.
     let client_options = ClientOptions::parse("mongodb://localhost:27017").await?;
 
@@ -23,9 +19,9 @@ pub async fn connect_to_mongodb() -> mongodb::error::Result<()> {
     for db_name in client.list_database_names(None, None).await? {
         println!("DB name: {}", db_name);
     }
-    
 
-    Ok(())
+    let db = client.database(name);
+    Ok(db)
 }
 
 pub async fn get_one(
@@ -46,10 +42,9 @@ pub async fn get_many(
     Ok(users)
 }
 
-pub async fn insert_one(db: mongodb::Database, entity: User) -> Result<(), Err> {
+pub async fn insert_one(db: mongodb::Database, entity: User) -> Result<InsertOneResult, Error> {
     let typed_collection = db.collection::<User>("users");
-    typed_collection.insert_one(entity, None).await?;
-    Ok(())
+    typed_collection.insert_one(entity, None).await
 }
 
 pub async fn insert_many(db: mongodb::Database, entities: Vec<User>) -> Result<(), Err> {

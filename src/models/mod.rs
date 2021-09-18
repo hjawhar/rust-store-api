@@ -7,5 +7,12 @@ pub struct Status {
 
 #[derive(Serialize, Deserialize)]
 pub struct User {
-    name: String,
+    pub name: String,
+}
+
+pub struct Err {}
+impl From<mongodb::error::Error> for Err {
+    fn from(_error: mongodb::error::Error) -> Self {
+        Err {}
+    }
 }
