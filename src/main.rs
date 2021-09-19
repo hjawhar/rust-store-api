@@ -1,3 +1,6 @@
+#[macro_use]
+extern crate throw;
+
 mod config;
 mod db;
 mod models;

@@ -1911,6 +1911,7 @@ dependencies = [
  "mongodb",
  "serde 1.0.130",
  "serde_json",
+ "throw",
  "tokio 1.11.0",
 ]
 
@@ -2311,6 +2312,12 @@ checksum = "d050e60b33d41c19108b32cea32164033a9013fe3b46cbd4457559bfbf77afaa"
 dependencies = [
  "num_cpus",
 ]
+
+[[package]]
+name = "throw"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5ed011a2531182d1cbe134f1e48c0d348f0b47f95c6340874bff7bb3a1e10f75"
 
 [[package]]
 name = "time"
